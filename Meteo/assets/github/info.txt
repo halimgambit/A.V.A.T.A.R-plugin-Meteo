@@ -1,0 +1,6 @@
+Meteo
+
+Ce plugin donne la mété la plus part des ville
+
+## Multi-room
+This plugin is fully multi-room compatible.

@@ -1,0 +1,13 @@
+{
+  "speech": {
+    "weather": "$$, in $$, $$. Outside temperature $$ degrees, wind speed $$ kilometers per hour.",
+    "errorApi": "Weather API error.",
+    "errorAccess": "Unable to retrieve weather data.",
+    "errorFormat": "Invalid weather format."
+  },
+  "time": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "afterTomorrow": "Day after tomorrow"
+  }
+}

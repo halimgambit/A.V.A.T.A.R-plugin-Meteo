@@ -1,0 +1,12 @@
+{
+    "name": "Meteo",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Plugin Meteo for A.V.A.T.A.R",
+    "repository": "https://github.com/YOUR-REPOSITORY",
+    "keywords": [
+        "Meteo"
+    ],
+    "author": "YOUR-NAME",
+    "license": "mit"
+  }

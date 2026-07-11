@@ -1,0 +1,11 @@
+{"modules":{
+    "Meteo":{
+        "version":"1.0",
+"name":"météo",
+"rules":{
+    "getWeather":["weather","what's the weather like in"]
+    },
+    "active":true
+    }
+    }
+    }
