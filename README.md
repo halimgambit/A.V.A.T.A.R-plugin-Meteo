@@ -1,6 +1,6 @@
 # Meteo
 
-Donne la météo de la plus part des villes
+Donne la météo de la plus part des villes mondiale, la qualité de l'air
 
 - This plugin is an add-on for the [A.V.A.T.A.R](https://avatar-home-automation.github.io/docs) framework. 
 
@@ -10,6 +10,7 @@ Commandes :
 - donne moi la météo demain à marseille
 - il fait quel temps aprés demain à pekin
 - donne la météo sur 3 jours
+- quel est la qualité de l'air
 
 - plugin plug&play sans clé api
 
