@@ -1,13 +1,15 @@
 {
-  "speech": {
-    "weather": "$$, in $$, $$. Outside temperature $$ degrees, wind speed $$ kilometers per hour.",
+  speech: {
+    "weather": "$$, à $$, $$. The outside temperature is $$ degrees, and the wind speed is $$ kilometers per hour."
+    "air": "At $$, the outdoor air quality is $$, with an index of $$.",
     "errorApi": "Weather API error.",
-    "errorAccess": "Unable to retrieve weather data.",
-    "errorFormat": "Invalid weather format."
+    "errorAccess": "Unable to retrieve the weather.",
+    "errorFormat": "Invalid weather format.",
+    "errorHttp": "HTTP error."
   },
   "time": {
     "today": "Today",
-    "tomorrow": "Tomorrow",
-    "afterTomorrow": "Day after tomorrow"
+    "tomorrow": "Demain",
+    "afterTomorrow": "The day after tomorrow"
   }
 }
