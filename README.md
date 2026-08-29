@@ -27,7 +27,7 @@ The `Meteo` plugin relies solely on the system's available languages.
     <td style="border: none;"><img src="Meteo/assets/images/Meteo.png" alt="Meteo Logo" width="120"></td>
     <td style="border: none;">
       <h1 style="margin: 0;color: brown;">Meteo</h1>
-      <h3 style="margin: 0;">Get Weather</h3>
+      <h3 style="margin: 0;">Get Weather, Get Air Quality</h3>
     </td>
   </tr>
 </table>
