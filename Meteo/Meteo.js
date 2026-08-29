@@ -149,7 +149,7 @@ const getAirQuality = indice =>
     indice <= 200 ? "mauvaise" :
     indice <= 300 ? "très mauvaise" : "dangereuse";
 
-function weatherCodeToText(code) {
+const weatherCodeToText = (code) => {
     const map = {
         0: "ciel dégagé", 1: "partiellement nuageux", 2: "nuageux", 3: "couvert",
         45: "brouillard", 48: "brouillard givrant",
