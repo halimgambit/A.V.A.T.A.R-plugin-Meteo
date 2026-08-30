@@ -1,6 +1,6 @@
 # Meteo
 
-Donne la météo de la plus part des villes mondiale, la qualité de l'air
+Donne la météo de la plus part des villes mondiale et la qualité de l'air
 
 - This plugin is an add-on for the [A.V.A.T.A.R](https://avatar-home-automation.github.io/docs) framework. 
 
