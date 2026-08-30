@@ -6,19 +6,22 @@ export async function init() {
 
 export async function action(data, callback) {
     try {
-        const L = await Avatar.lang.getPak("Meteo", data.language);
-        const actions = {
-            getWeather: () => handleWeather(data, data.client, L, callback),
-            getAir: () => getAir(data.client, L, callback)
+        const Locale = await Avatar.lang.getPak("Meteo", data.language);
+
+        const tblActions = {
+            getWeather: () => handleWeather(data, data.client, Locale, callback),
+            getAir: () => getAir(data.client, Locale, callback)
         };
 
         info("Meteo:", data.action.command, "from", data.client);
 
-        if (actions[data.action.command]) await actions[data.action.command]();
-        else callback();
+        if (tblActions[data.action.command]) {
+            await tblActions[data.action.command]();
+        } else {
+            callback();
+        }
     } catch (err) {
         if (data.client) Avatar.Speech.end(data.client);
-        error("Meteo Error:", err.message);
         callback();
     }
 }
@@ -96,11 +99,17 @@ const weather = async (city, period, client, L, callback) => {
 
         const message = L.get(["speech.weather", when, city, desc, temp, wind]);
         info(message);
-        Avatar.speak(message, client, callback);
+        
+        Avatar.speak(message, client, () => {
+            Avatar.Speech.end(client);
+            if (callback) callback();
+        });
 
     } catch (err) {
         error("Meteo ERROR:", err.message);
-        Avatar.speak(L.get("speech.errorAccess"), client, callback);
+        Avatar.speak(L.get("speech.errorAccess"), client, () => {
+            Avatar.Speech.end(client, callback);
+        });
     }
 };
 
@@ -134,11 +143,18 @@ const getAir = async (client, L, callback) => {
         const message = L.get(["speech.air", city, air, Math.round(indice)]);
 
         info(message);
-        Avatar.speak(message, client, callback);
+        
+        Avatar.speak(message, client, () => {
+            Avatar.Speech.end(client);
+            callback();
+        });
 
     } catch (err) {
         error("Air Quality ERROR:", err.message);
-        Avatar.speak(L.get("speech.errorAccess"), client, callback);
+        Avatar.speak(L.get("speech.errorAccess"), client, () => {
+            Avatar.Speech.end(client);
+            callback();
+        });
     }
 };
 
